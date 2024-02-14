@@ -2,9 +2,9 @@
 
 namespace ChrisReedIO\JotformSDK\Tests;
 
+use ChrisReedIO\JotformSDK\JotformSDKServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use ChrisReedIO\JotformSDK\JotformSDKServiceProvider;
 
 class TestCase extends Orchestra
 {
