@@ -2,9 +2,9 @@
 
 namespace ChrisReedIO\JotformSDK;
 
+use ChrisReedIO\JotformSDK\Commands\JotformSDKCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use ChrisReedIO\JotformSDK\Commands\JotformSDKCommand;
 
 class JotformSDKServiceProvider extends PackageServiceProvider
 {
