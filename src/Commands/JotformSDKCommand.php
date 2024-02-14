@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace ChrisReedIO\JotformSDK\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class JotformSDKCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-jotform-sdk';
 
     public $description = 'My command';
 
