@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Facade;
  */
 class JotformSDK extends Facade
 {
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
         return \ChrisReedIO\JotformSDK\JotformSDK::class;
     }

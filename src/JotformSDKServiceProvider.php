@@ -3,6 +3,7 @@
 namespace ChrisReedIO\JotformSDK;
 
 use ChrisReedIO\JotformSDK\Commands\JotformSDKCommand;
+use JotForm;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -17,9 +18,16 @@ class JotformSDKServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-jotform-sdk')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel-jotform-sdk_table')
-            ->hasCommand(JotformSDKCommand::class);
+            ->hasConfigFile();
+        // ->hasViews()
+        // ->hasMigration('create_laravel-jotform-sdk_table')
+        // ->hasCommand(JotformSDKCommand::class);
+    }
+
+    public function packageRegistered(): void
+    {
+        $this->app->singleton(JotForm::class, function () {
+            return new Jotform(config('jotform-sdk.api_key'));
+        });
     }
 }
