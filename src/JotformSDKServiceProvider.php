@@ -19,14 +19,14 @@ class JotformSDKServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-jotform-sdk')
             ->hasConfigFile();
-            // ->hasViews()
-            // ->hasMigration('create_laravel-jotform-sdk_table')
-            // ->hasCommand(JotformSDKCommand::class);
+        // ->hasViews()
+        // ->hasMigration('create_laravel-jotform-sdk_table')
+        // ->hasCommand(JotformSDKCommand::class);
     }
 
     public function packageRegistered(): void
     {
-        $this->app->singleton(JotForm::class , function () {
+        $this->app->singleton(JotForm::class, function () {
             return new Jotform(config('jotform-sdk.api_key'));
         });
     }
